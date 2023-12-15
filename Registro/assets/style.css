@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: Arial;
+ }	
+
+ body
+ {
+ 	background-image: url(stretched-1366-768-805197.jpg);
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-attachment: fixed;
+ }
+
+ main
+ {
+ 	padding: 20px;
+ 	margin: auto;
+ 	margin-top: 100px;
+ }
+/*Este metodo afecta a contenedor global que seria como el lienzo
+donde trabajaremos*/
+ .Contenedor_Global
+ {
+ 	width: 100%;
+ 	max-width: 800px;
+ 	margin: auto;
+ 	position: relative;
+ }
+/*Este metodo afecta a caja trasera que seria como el contenedor
+o la parte de atras de los div, h3, p, etc*/
+ .Caja_Trasera
+ {
+ 	width: 100%;
+ 	padding: 20px 20px;
+ 	display: flex;
+ 	justify-content: center;
+ 	backdrop-filter: blur(5px);
+	border: 1px solid blue;
+	border-radius: 20px;
+ }
+/*este metodo afecta a todos los div de caja trasera*/
+ .Caja_Trasera div
+ {
+ 	margin: 100px 40px;
+ 	color: white;
+ 	transition: all 500ms;
+
+ }
+/*este metodo afecta a las p de todos los div de caja trasera y 
+todos los botones de todos los div de caja trasera*/
+ .Caja_Trasera div p,
+  .Caja_Trasera div button
+  {
+  	margin-top: 30px;
+  }
+/*Este metodo afecta a todos los h3 de todos los div de caja trasera*/
+ .Caja_Trasera div h3
+ {
+ 	font-weight: 400;
+ 	font-size: 26px;
+ }
+/*Este metodo afecta a todos los botones de los div de caja trasera
+*/
+.Caja_Trasera div button
+{
+	padding: 10px 40px;
+	border: 1px solid white;
+	background: transparent;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;;
+	color: white;
+	outline: none;
+	transition: all 300ms;
+	border-radius: 20px;
+}
+/*Este metodo afecta a todos los botones de los div de caja trasera
+pero este afecta cuando el cursos se pone sobre los botones
+*/
+.Caja_Trasera div button:hover
+{
+	background: white;
+}
+
+/*Ahora se trabajara con los formularios*/
+.Contenedor_Formularios
+{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 380px;
+	position: relative;
+	top:-195px;
+	left: 10px;
+
+	/*animacion de movimiento para cuando la funcion
+	de javascrip se ejecute*/
+	transition: left 500ms cubic-bezier(0.175,0.885,0.320,1.27);
+}
+.Form_Registro
+{
+	width: 100%;
+	padding: 30px 20px;
+	background: white;
+	position: absolute;
+	border-radius: 20px
+}
+.Form_Login
+{
+	width: 100%;
+	padding: 90px 20px;
+	background: white;
+	position: absolute;
+	border-radius: 20px
+}
+.Contenedor_Formularios form h2
+{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: blue;
+}
+.Contenedor_Formularios form input
+{
+	width: 100%;
+	margin-top: 20px;
+	padding: 10px;
+	border: none;
+	background: #F2F2F2;
+	font-size: 16px;
+	outline: none; /*outline quita los bordes al posicionarnos en el input*/
+}
+
+.Contenedor_Formularios form button
+{
+	padding: 10px 40px;
+	margin-top: 40px;
+	border: none;
+	font-size: 14px;
+	background: blue;
+	color: white;
+	cursor:pointer;
+	outline: none;
+	border-radius: 20px
+}
+
+.Form_Login
+{
+opacity: 1;
+display: block;
+}
+.Form_Registro
+{
+	display: none;
+}
+
